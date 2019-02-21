@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Oh Dear",
+  "version": "0.0.2",
+  "description": "Check on your website",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png",
+    "128": "icons/icon.png"
+  },
+  "homepage_url": "https://ohdear.app",
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "browser_style": true,
+    "default_title": "Check Active Tab",
+    "default_popup": "popup/window.html"
+  }
+}
