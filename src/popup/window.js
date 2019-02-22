@@ -1,5 +1,12 @@
-const link = document.getElementById('check-link'),
-      scheme_list = ["https://", "http://"];
+const availabilityLink = {
+    elem: document.getElementById('check-availability-link'),
+    prefix: 'https://ohdear.app/tools/reachable?prefill=',
+  },
+  certificateLink = {
+    elem: document.getElementById('check-certificate-link'),
+    prefix: 'https://ohdear.app/tools/certificate?prefill=',
+  },
+  scheme_list = ["https://", "http://"];
 
 function isURL(tab){
   for (let scheme of scheme_list) 
@@ -12,12 +19,17 @@ function run() {
   try {
     let browserAPI = (typeof browser == "object") ? browser : chrome;
     browserAPI.tabs.query({currentWindow: true, active: true}, (tabs) => {
-      console.log(tabs);
       if (tabs.length) {
         let tab = tabs.filter(isURL)[0]
-        link.href = 'https://ohdear.app/tools/reachable?prefill='+encodeURIComponent(tab.url);
-        link.target = '_blank';
-        link.classList.remove('bg-darken'); // using this as a disabled state
+
+        // Seeing errors in some cases where we have a tab, but it's undefined... Guard
+        if(tab && tab.url) {
+          for (let link of [availabilityLink, certificateLink]) {
+            link.elem.href = link.prefix+encodeURIComponent(tab.url);
+            link.elem.target = '_blank';
+            link.elem.classList.remove('bg-darken'); // using this as a disabled state
+          }
+        }
       }
     });
   } catch (e) {
