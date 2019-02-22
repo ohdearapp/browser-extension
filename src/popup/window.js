@@ -17,6 +17,7 @@ function run() {
         let tab = tabs.filter(isURL)[0]
         link.href = 'https://ohdear.app/tools/reachable?prefill='+encodeURIComponent(tab.url);
         link.target = '_blank';
+        link.classList.remove('bg-darken'); // using this as a disabled state
       }
     });
   } catch (e) {
