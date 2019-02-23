@@ -1,4 +1,4 @@
-# ohdear-poc-ff-chrome
+# A Chrome and Firefox extension to quickly validate the certifcate and reachability of a site.
 
 Firefox &amp; Chrome addon to give bookmarklet functionality using browser API's
 
@@ -27,12 +27,15 @@ for now
 * In-extension window details
 * History
 
-## Motivation
+## Credits
 
-I've been wanting to make a cross-browser extension for some time. This is the first extension with a single codebase which works across browsers. I Admittedly picked an API I've used in many other plugins, but the idea is that it has a few features I've wanted to use for a while.
+- [Lewis Cowles
+](Lewis Cowles
+)
+- [Freek Van der Herten](https://github.com/freekmurze)
+- [All Contribu
 
-Now this is in a nice condition I'd like to hand-off to https://github.com/ohdearapp/chrome-extension (as soon as please)
+## License
 
-## Disclaimer
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-This project and it's contributors do not claim affiliation to or any rights over ohdear.app, it's trademarks, intellectual property, branding or design assets, and will remove upon request any names, insignia or protected materials.
