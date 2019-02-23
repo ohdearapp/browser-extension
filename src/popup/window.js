@@ -37,6 +37,10 @@ function findActiveTab(tabs) {
 
     let tab = tabs.filter(isUrl)[0];
 
+    if (! tab) {
+        return;
+    }
+
     if (!tab.url) {
         return;
     }
