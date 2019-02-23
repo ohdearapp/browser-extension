@@ -14,7 +14,7 @@
   "browser_action": {
     "default_icon": "icons/icon128.png",
     "browser_style": true,
-    "default_title": "Check Active Tab",
+    "default_title": "Oh Dear!",
     "default_popup": "popup/window.html"
   }
 }
