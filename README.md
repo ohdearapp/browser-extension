@@ -29,9 +29,7 @@ for now
 
 ## Credits
 
-- [Lewis Cowles
-](Lewis Cowles
-)
+- [Lewis Cowles](https://github.com/Lewiscowles1986)
 - [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contribu
 
