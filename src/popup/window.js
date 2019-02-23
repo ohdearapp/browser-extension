@@ -22,11 +22,11 @@ function run() {
             for (let link of [availabilityLink, certificateLink]) {
                 link.elem.href = link.prefix + encodeURIComponent(tab.url);
                 link.elem.target = '_blank';
-                link.elem.classList.remove('bg-darken'); // using this as a disabled state
+                link.elem.classList.remove('disabled');
             }
         });
     } catch (exception) {
-        alert(`Oh Dear extension exception ${exception}`);
+        alert("The extension couldn't be loaded.");
     }
 }
 

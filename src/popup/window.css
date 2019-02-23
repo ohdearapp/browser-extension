@@ -40,3 +40,9 @@ a {
     color: #fff;
     margin: 0.25em;
 }
+
+.disabled {
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: not-allowed;
+}
+
