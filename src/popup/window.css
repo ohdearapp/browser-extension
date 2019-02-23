@@ -1,5 +1,4 @@
 html,
-
 * {
     margin: 0;
     padding: 0;
@@ -30,32 +29,14 @@ a {
     font-size: 20px;
 }
 
-.button,
-input[type='submit'],
-input[type='button'],
-button {
+.button {
     background-color: #e32929;
     border-width: 0.125rem;
     border-color: transparent;
-    font-weight: 800;
+    font-weight: 600;
     display: inline-block;
     padding: 0.5rem 0.75rem;
     border-radius: 0.125rem;
     color: #fff;
-}
-
-.font-semibold {
-    font-weight: 600;
-}
-
-.bg-darken {
-    background-color: rgba(0, 0, 0, 0.15);
-    cursor: not-allowed;
-}
-
-.button,
-input[type='submit'],
-input[type='button'],
-button {
     margin: 0.25em;
 }
