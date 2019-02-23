@@ -2,9 +2,13 @@
   "private": true,
   "scripts": {
     "format": "prettier --single-quote --write 'src/popup/**/*.{css,js,vue}'",
-    "lint": "eslint resources/js --fix --ext js,vue"
+    "lint": "eslint src/popup --fix --ext js,vue"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
+  },
+  "dependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^4.0.0"
   }
 }

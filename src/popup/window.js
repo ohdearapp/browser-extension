@@ -1,38 +1,57 @@
 const availabilityLink = {
-        elem: document.getElementById('check-availability-link'),
-        prefix: 'https://ohdear.app/tools/reachable?prefill='
-    },
-    certificateLink = {
-        elem: document.getElementById('check-certificate-link'),
-        prefix: 'https://ohdear.app/tools/certificate?prefill='
-    },
-    scheme_list = ['https://', 'http://'];
-
-function isURL(tab) {
-    for (let scheme of scheme_list) if (tab.url.startsWith(scheme)) return true;
-    return false;
-}
+    elem: document.getElementById('check-availability-link'),
+    prefix: 'https://ohdear.app/tools/reachable?prefill='
+};
+const certificateLink = {
+    elem: document.getElementById('check-certificate-link'),
+    prefix: 'https://ohdear.app/tools/certificate?prefill='
+};
+const scheme_list = ['https://', 'http://'];
 
 function run() {
     try {
-        let browserAPI = typeof browser == 'object' ? browser : chrome;
-        browserAPI.tabs.query({ currentWindow: true, active: true }, tabs => {
-            if (tabs.length) {
-                let tab = tabs.filter(isURL)[0];
+        const browserApi = typeof browser === 'object' ? browser : chrome;
 
-                // Seeing errors in some cases where we have a tab, but it's undefined... Guard
-                if (tab && tab.url) {
-                    for (let link of [availabilityLink, certificateLink]) {
-                        link.elem.href = link.prefix + encodeURIComponent(tab.url);
-                        link.elem.target = '_blank';
-                        link.elem.classList.remove('bg-darken'); // using this as a disabled state
-                    }
-                }
+        browserApi.tabs.query({ currentWindow: true, active: true }, tabs => {
+            const tab = findActiveTab(tabs);
+
+            if (!tab) {
+                return;
+            }
+
+            for (let link of [availabilityLink, certificateLink]) {
+                link.elem.href = link.prefix + encodeURIComponent(tab.url);
+                link.elem.target = '_blank';
+                link.elem.classList.remove('bg-darken'); // using this as a disabled state
             }
         });
-    } catch (e) {
-        console.log(e);
-        alert('Extension incompatible with browser. Cannot get active tab');
+    } catch (exception) {
+        alert(`Oh Dear extension exception ${exception}`);
     }
 }
+
+function findActiveTab(tabs) {
+    if (tabs.length === 0) {
+        return;
+    }
+
+    let tab = tabs.filter(isUrl)[0];
+
+    if (!tab.url) {
+        return;
+    }
+
+    return tab;
+}
+
+function isUrl(tab) {
+    for (let scheme of scheme_list) {
+        if (tab.url.startsWith(scheme)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 document.addEventListener('DOMContentLoaded', run);

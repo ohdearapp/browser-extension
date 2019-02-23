@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "globals": {
+    "browser": true,
+    "chrome": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "browser": true
+  }
+}
