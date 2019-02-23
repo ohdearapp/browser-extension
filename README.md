@@ -31,7 +31,7 @@ for now
 
 - [Lewis Cowles](https://github.com/Lewiscowles1986)
 - [Freek Van der Herten](https://github.com/freekmurze)
-- [All Contribu
+- [All Contributors]()
 
 ## License
 
