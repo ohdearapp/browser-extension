@@ -2,9 +2,13 @@
   "private": true,
   "scripts": {
     "format": "prettier --single-quote --write 'src/popup/**/*.{css,js,vue}'",
-    "lint": "eslint src/popup --fix --ext js,vue"
+    "lint": "eslint src/popup --fix --ext js,vue",
+    "publish:chrome": "shipit chrome ./src",
+    "publish:firefox": "shipit firefox ./src",
+    "publish:opera": "shipit opera ./src"
   },
   "devDependencies": {
+    "@wext/shipit": "^0.1.5",
     "prettier": "^1.16.4"
   },
   "dependencies": {
