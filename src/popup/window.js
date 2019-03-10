@@ -15,7 +15,7 @@ function run() {
         browserApi.tabs.query({ currentWindow: true, active: true }, tabs => {
             const tab = findActiveTab(tabs);
 
-            if (!tab) {
+            if (! tab) {
                 return;
             }
 
@@ -41,7 +41,7 @@ function findActiveTab(tabs) {
         return;
     }
 
-    if (!tab.url) {
+    if (! tab.url) {
         return;
     }
 
