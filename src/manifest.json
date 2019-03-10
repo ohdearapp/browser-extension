@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Oh Dear!",
   "version": "1.0.0",
-  "description": "SSL certificate health and reachabilty check for your site",
+  "description": "SSL certificate health and availability check for any website.",
   "icons": {
     "128": "icons/icon128.png"
   },

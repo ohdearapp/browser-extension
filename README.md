@@ -1,4 +1,4 @@
-# A Chrome and Firefox extension to quickly validate the certifcate and reachability of a site.
+# A Chrome and Firefox extension to quickly validate the certificate and availability of a site.
 
 This repo contains the source code of our browser extension.
 
@@ -6,7 +6,8 @@ This repo contains the source code of our browser extension.
 
 - [Lewis Cowles](https://github.com/Lewiscowles1986)
 - [Freek Van der Herten](https://github.com/freekmurze)
-- [All Contributors]()
+- [Mattias Geniar](https://github.com/mattiasgeniar)
+- [All Contributors](graphs/contributors)
 
 ## License
 
